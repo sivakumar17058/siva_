@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>luxury watches</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon? family=material+icons">
+    
+</head>
+<body>
+    <header>
+        <div class="logo>Timeless watches"></div>
+        <div class="search-bar">
+            <input type="text" placeholder="search...">
+            <button>w</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Brands</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Coutact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="product-container">
+        <div class="product-gallery">
+            <img id="main-image" src="watch.jpg"width="300px" height="300px">
+            <div class="thumbnails">
+                <img src="watch1.webp"width="300px" height="300px">
+                <img src="watch2.jpg"width="300px" height="300px">
+                <img src="watch3.jpg"width="300px" height="300px">
+                <img src="watch4.jpg"width="300px" height="300px">
+            </div>
+        </div>
+        <div class="product-details">
+            <h1>
+                Elegant Luxury Watch
+            </h1>
+            <p class="brand">PRESTIGE TIME CO.</p>
+            <P class="price">
+                <span class="current-price">$499.99</span>
+                <span class="old-price">$799.99</span>
+                <span class="discount">38% OFF</span>
+            </P>
+            <p class="description">
+                this luxutious timepiece combines elegance with precision craftsmanship. perfect for formal occasions or everyday wear,it features premium materials
+                and impeccable design.
+            </p>
+            <div class="ratings">
+                <span class="star"><i class="material-icons">star</i></span>
+                <span class="star"><i class="material-icons">star</i></span>
+                <span class="star"><i class="material-icons">star</i></span>
+                <span class="star"><i class="material-icons">star</i></span>
+                <p> Rated 4.8/5(256 reviews)
+                </p>
+                
+            </div>
+            <div class="quantity-selector">
+                <button onclick="decreasequantity()">-</button>
+                <input type="number"
+            id="quantity" value="1" min="1">
+                 <button onclick="increasequantity()">+</button>
+            </div>
+            <button class="add-to-cart">Add to bag</button>
+            <div class="promotion">
+                <h3>Limiter-Time offer!</h3>
+                <p>Get an additional 10% off your first purchase when you sign up for our newsletter.</p>
+                <button class="promo-btn">sign up Now</button>
+            </div>
+        </div>
+    </div>
+    <footet>
+        <p>
+            &copy;2024 Timeless Watches.crafted for Excellence.</p>
+         </footet>
+         <script>
+            function changeImage(imagesrc){
+                document.getElementById('main-image').src=imagesrc;
+            }
+            function increaseQuantity(){
+                const quantityInput=
+                document.getElementById('quantity');
+                quantityInput.value=
+                parseInt(quantityInput.value)+1;
+            }
+            function decreasequantity(){
+                const quantityInput =
+                document.getElementById('quantity');
+                if(parseInt(quantityInput.value)>1){
+                     quantityInput.value=
+                     parseInt(quantityInput.value)-1;
+                }
+            }
+         </script>
+</body>
+</html>
